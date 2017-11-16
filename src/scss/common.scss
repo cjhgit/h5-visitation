@@ -1,0 +1,215 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body,
+.page {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+body {
+    font-family: "microsoft yahei";
+}
+
+.swiper-container {
+    /*display: none;*/
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*  width: 320px;
+      height: 480px;*/
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+}
+
+.swiper-slide {
+    width: 100%;
+    height: 100%;
+    /*background: url("/static/img/bg.jpg") no-repeat left top;*/
+    /*background-size: 100% 100%;*/
+}
+
+img {
+    display: block;
+}
+
+.swiper-pagination-bullet {
+    width: 6px;
+    height: 6px;
+    background: #fff;
+    opacity: .4;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+@-webkit-keyframes tipmove {
+    0% {
+        bottom: 10px;
+        opacity: 0
+    }
+    50% {
+        bottom: 15px;
+        opacity: 1
+    }
+    100% {
+        bottom: 20px;
+        opacity: 0
+    }
+}
+
+.ani {
+    position: absolute;
+}
+
+.txt {
+    position: absolute;
+}
+
+#array {
+    position: absolute;
+    z-index: 999;
+    -webkit-animation: tipmove 1.5s infinite ease-in-out;
+}
+
+/**/
+.loading {
+    display: none;
+    background: #48424f;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 9999;
+    top: 0;
+}
+.loadbg {
+    position: absolute;
+    z-index: 1000;
+    height: 42px;
+    background-image: url("/static/img/loading.svg")
+}
+.loadbg, .loadbox {
+    display: block;
+    width: 70px;
+}
+.loadbg, .loadbox {
+    display: block;
+    width: 70px;
+}
+.loadbox {
+    position: relative;
+    height: 70px;
+    margin: 0 auto;
+    margin-top: 50%;
+}
+.loading-tip {
+    /* display: none; */
+    position: absolute;
+    bottom: 40px;
+    font-size: 16px;
+    z-index: 9999;
+    width: 200px;
+    left: 50%;
+    margin-left: -100px;
+    text-align: center;
+    color: #7986cb;
+}
+/**/
+.page-bg {
+    width: 100%;
+    height: 100%;
+}
+.bgm-btn.rotate {
+    -webkit-animation: rotating 1.2s linear infinite;
+    animation: rotating 1.2s linear infinite;
+}
+.bgm-btn {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 200;
+    display: none;
+    width: 30px;
+    height: 30px;
+    background-image: url("/static/img/bgmBtn-fbd2dc.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+@-webkit-keyframes rotating {
+    0% {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(1turn)
+    }
+}
+
+@keyframes rotating {
+    0% {
+        transform: rotate(0deg)
+    }
+    to {
+        transform: rotate(1turn)
+    }
+}
+/**/
+.layer-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.layer-bg .cloud {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 251px;
+    height: 264.264px;
+    margin-top: -125px;
+    margin-left: -132px;
+    animation: rotateIn 20s linear 0s infinite normal both;
+}
+.layer-bg .cloud-2 {
+    position: absolute;
+    bottom: -30px;
+    left: -35px;
+    width: 134.5px;
+    height: 120.5px;
+    animation: rotateIn 20s linear 0s infinite normal both;
+}
+.layer-bg .star-2 {
+    position: absolute;
+    bottom: -30px;
+    left: -35px;
+    width: 134.5px;
+    height: 120.5px;
+    animation: rotateIn 20s linear 0s infinite normal both;
+}
+.layer-bg .cloud-3 {
+    position: absolute;
+    top: -30px;
+    right: -35px;
+    width: 134.5px;
+    height: 120.5px;
+    animation: rotateIn 20s linear 0s infinite normal both;
+}
+.layer-bg .star-3 {
+    position: absolute;
+    top: -30px;
+    right: -35px;
+    width: 134.5px;
+    height: 120.5px;
+    animation: rotateIn 20s linear 0s infinite normal both;
+}

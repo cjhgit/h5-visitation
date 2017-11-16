@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    @@include('../components/meta.html')
+
+    <title>典型案例 - ${{ common.company }}$</title>
+
+    @@include('../components/link.html')
+    <link rel="stylesheet" href="/static/css/index.css">
+</head>
+<body>
+@@include('../components/header.html')
+
+@@include('../components/nav.html')
+
+<main class="layout-body">
+    <div class="wrap">
+        <section class="case-box">
+            <h2 class="case-title">${{ case.case_2 }}$</h2>
+            <img class="case-img" src="/static/img/case-2.png">
+            <div class="case-desc">
+                ${{ case.case_2_desc }}$
+            </div>
+        </section>
+        <section class="case-box">
+            <h2 class="case-title">${{ case.case_1 }}$</h2>
+            <img class="case-img" src="/static/img/case-1.png">
+            <div class="case-desc">
+                ${{ case.case_1_desc }}$
+            </div>
+        </section>
+        <section class="case-box">
+            <h2 class="case-title">${{ case.case_5 }}$</h2>
+            <img class="case-img" src="/static/img/case-5.png">
+            <div class="case-desc">
+                ${{ case.case_5_desc }}$
+            </div>
+        </section>
+        <section class="case-box">
+            <h2 class="case-title">${{ case.case_3 }}$</h2>
+            <img class="case-img" src="/static/img/case-3.png">
+            <div class="case-desc">
+                ${{ case.case_3_desc }}$
+            </div>
+        </section>
+        <section class="case-box">
+            <h2 class="case-title">${{ case.case_4 }}$</h2>
+            <img class="case-img" src="/static/img/case-4.png">
+            <div class="case-desc">
+                ${{ case.case_4_desc }}$
+            </div>
+        </section>
+
+        @@include('../components/pc.html')
+    </div>
+</main>
+
+@@include('../components/footer.html')
+
+@@include('../components/script.html')
+</body>
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    @@include('../components/meta.html')
+
+    <title>关于我们 - ${{ common.company }}$</title>
+
+    @@include('../components/link.html')
+    <link rel="stylesheet" href="/static/css/index.css">
+</head>
+<body>
+@@include('../components/header.html')
+
+@@include('../components/nav.html')
+
+<main class="layout-body">
+    <div class="wrap">
+        <section class="product-box">
+            <h2 class="product-title">${{ production.production }}$</h2>
+            <img class="product-img" src="/static/img/product-2.png">
+            <div class="product-desc">
+                <p><strong>${{ production.production_2 }}$</strong> | ${{ production.production_2_desc }}$</p>
+            </div>
+        </section>
+        <section class="product-box">
+            <img class="product-img" src="/static/img/product-1.png">
+            <div class="product-desc">
+                <p><strong>${{ production.production_1 }}$</strong> | ${{ production.production_1_desc }}$</p>
+            </div>
+        </section>
+        <section class="product-box">
+            <img class="product-img" src="/static/img/product-3.png">
+            <div class="product-desc">
+                <p><strong>${{ production.production_3 }}$</strong> | ${{ production.production_3_desc }}$</p>
+            </div>
+        </section>
+        <section class="product-box">
+            <img class="product-img" src="/static/img/product-4.png">
+            <div class="product-desc">
+                <p><strong>${{ production.production_4 }}$</strong> | ${{ production.production_4_desc }}$</p>
+            </div>
+        </section>
+        <section class="product-box">
+            <img class="product-img" src="/static/img/product-5.jpg">
+            <div class="product-desc">
+                <p><strong>${{ production.production_5 }}$</strong> | ${{ production.production_5_desc }}$</p>
+            </div>
+        </section>
+        <section class="product-box software-box">
+            <h2 class="product-title">${{ production.software }}$</h2>
+            <ul class="software-list">
+                <li class="software-item software-item-1 odd">
+                    <img class="software-img software-img-1" src="/static/img/software-1.png">
+                    <div class="software-info">
+                        <h3 class="software-name">${{ production.software_1 }}$</h3>
+                        <div class="software-desc software-desc-1">${{ production.software_1_desc }}$</div>
+                    </div>
+                </li>
+                <li class="software-item">
+                    <div class="software-info">
+                        <h3 class="software-name">${{ production.software_2 }}$</h3>
+                        <div class="software-desc software-desc-2">${{ production.software_2_desc }}$</div>
+                    </div>
+                    <img class="software-img software-img-2" src="/static/img/software-2.png">
+                </li>
+                <li class="software-item odd">
+                    <img class="software-img software-img-3" src="/static/img/software-1.png">
+                    <div class="software-info">
+                        <h3 class="software-name">${{ production.software_3 }}$</h3>
+                        <div class="software-desc software-desc-3">${{ production.software_3_desc }}$</div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section class="product-box hardware-box">
+            <h2 class="product-title">${{ production.hardware }}$</h2>
+            <ul class="hardware-list">
+                <li class="hardware-item">
+                    <div class="img-box">
+                        <!--style="background: url('/static/img/hardware-1.png') no-repeat center center;"-->
+                        <img class="hardware-img hardware-img-1" src="/static/img/hardware-1.png">
+                    </div>
+                    <h4 class="hardware-name">${{ production.hardware_1 }}$</h4>
+                </li>
+                <li class="hardware-item">
+                    <div class="img-box">
+                        <img class="hardware-img hardware-img-2" src="/static/img/hardware-2.png">
+                    </div>
+                    <h4 class="hardware-name">${{ production.hardware_2 }}$</h4>
+                </li>
+                <li class="hardware-item">
+                    <div class="img-box">
+                        <img class="hardware-img hardware-img-3" src="/static/img/hardware-3.png">
+                    </div>
+                    <h4 class="hardware-name">${{ production.hardware_3 }}$</h4>
+                </li>
+                <li class="hardware-item">
+                    <div class="img-box">
+                        <img class="hardware-img  hardware-img-4" src="/static/img/hardware-4.png">
+                    </div>
+                    <h4 class="hardware-name">${{ production.hardware_4 }}$</h4>
+                </li>
+                <li class="hardware-item">
+                    <div class="img-box">
+                        <img class="hardware-img hardware-img-5" src="/static/img/hardware-5.png">
+                    </div>
+                    <h4 class="hardware-name">${{ production.hardware_5 }}$</h4>
+                </li>
+                <li class="hardware-item">
+                    <div class="img-box">
+                        <img class="hardware-img hardware-img-6" src="/static/img/hardware-6.png">
+                    </div>
+                    <h4 class="hardware-name">${{ production.hardware_6 }}$</h4>
+                </li>
+                <li class="hardware-item">
+                    <div class="img-box">
+                        <img class="hardware-img hardware-img-7" src="/static/img/hardware-7.png">
+                    </div>
+                    <h4 class="hardware-name">${{ production.hardware_7 }}$</h4>
+                </li>
+                <li class="hardware-item">
+                    <div class="img-box">
+                        <img class="hardware-img hardware-img-8" src="/static/img/hardware-8.png">
+                    </div>
+                    <h4 class="hardware-name">${{ production.hardware_8 }}$</h4>
+                </li>
+                <li class="hardware-item">
+                    <div class="img-box">
+                        <img class="hardware-img hardware-img-9" src="/static/img/hardware-9.png">
+                    </div>
+                    <h4 class="hardware-name">${{ production.hardware_9 }}$</h4>
+                </li>
+            </ul>
+        </section>
+
+        @@include('../components/pc.html')
+    </div>
+</main>
+
+@@include('../components/footer.html')
+
+@@include('../components/script.html')
+</body>
+</html>

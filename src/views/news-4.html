@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    @@include('../components/meta.html')
+
+    <title>最新动态 - ${{ common.company }}$</title>
+
+    @@include('../components/link.html')
+    <link rel="stylesheet" href="/static/css/index.css">
+</head>
+<body>
+@@include('../components/header.html')
+
+@@include('../components/nav.html')
+
+<main class="layout-body">
+    <div class="wrap">
+        <div class="detail-box">
+            <h2 class="section-title">最新动态</h2>
+            <h2 class="section-sub-title">Recent news</h2>
+        </div>
+        <div class="article-box">
+            <h1 class="article-title">当你老了，人脸识别还能识别你吗</h1>
+            <div class="article-time">2017年7月10日</div>
+            <img class="article-img" src="/static/img/news-4.png">
+            <article class="article">
+                <p>人脸识别，是基于人的脸部特征信息进行身份识别的一种生物识别技术。用摄像机或摄像头采集含有人脸的图像或视频流，并自动在图像中检测和跟踪人脸，进而对检测到的人脸进行脸部的一系列相关技术，通常也叫做人像识别、面部识别。</p>
+                <p>很多人可能都有一个疑问，如果老了以后，人脸识别会不会识别不出来？</p>
+                <p>人脸识别技术属于生物识别技术的一种，人脸识别、指纹、眼睛的虹膜识别等都属于生物识别技术，机器会根据人的五官具体的形式来进行比对，关键是对比镜头前的脸与系统中的那张脸的五官是否完全一致。其研发的人脸识别系统会自动学习人体可变特征，不必担心胖瘦、化妆或者随着年纪的变化发生的面部变动。</p>
+                <p>换句话阐述，人的脸型会变，但是眼珠等细致的五官、皮肤纹理等无法根本改变，所以大可不必担心年纪的变化而产生人脸识别无法识别的情况，随着技术的更新，笔者相信未来有比人脸识别更先进的技术，从而一劳永逸。</p>
+            </article>
+            <div class="hr"></div>
+            <div class="article-page">
+                <div class="item">下一篇： <a href="./news-5.html">开启“移动刷脸”新模式——Centrizen（世纪晟科技）携云浮公安局</a></div>
+                <div class="item">上一篇： <a href="./news-3.html">行业新闻 | 人脸识别是怎么实现的</a></div>
+            </div>
+        </div>
+    </div>
+</main>
+
+@@include('../components/footer.html')
+
+@@include('../components/script.html')
+</body>
+</html>

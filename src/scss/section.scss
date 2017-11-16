@@ -1,0 +1,28 @@
+.section-1 {
+    .logo {
+        position: absolute;
+        width: 120px;
+        height: 26.0339px;
+        top: px2rem(66);
+        left: px2rem(80);
+        animation: fadeInDown 2s ease 2s 1 normal both;
+    }
+    .title {
+        color: #fff;
+        font-size: 48px;
+        text-align: center;
+        margin-top: px2rem(417);
+    }
+}
+.asd {
+    width: 85.4px;
+    height: 349.917px;
+    left: 216.247px;
+    top: 31.6667px;
+    z-index: 2;
+    visibility: visible;
+    animation-duration: 0.5s;
+    -webkit-animation-duration: 0.5s;
+    animation-delay: 0.3s;
+    -webkit-animation-delay: 0.3s;
+}
