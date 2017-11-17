@@ -1,3 +1,24 @@
+.swiper-slide {
+    position: relative;
+    li {
+        position: absolute;
+    }
+}
+.section {
+    //background-color: #f00;
+    //border: 1px solid #000;
+    .white-bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+    }
+    .ani {
+        animation-timing-function: ease;
+    }
+}
 .section-1 {
     .logo {
         position: absolute;
@@ -5,13 +26,122 @@
         height: 26.0339px;
         top: px2rem(66);
         left: px2rem(80);
-        animation: fadeInDown 2s ease 2s 1 normal both;
+        //animation: fadeInDown 2s ease 2s 1 normal both;
     }
     .title {
         color: #fff;
         font-size: 48px;
         text-align: center;
         margin-top: px2rem(417);
+        margin-left: px2rem(250);
+    }
+    .line {
+        position: absolute;
+        top: px2rem(580);
+        left: px2rem(106);
+        width: px2rem(534);
+        height: 1px;
+        background-color: #fff;
+    }
+    .text {
+        position: absolute;
+        top: px2rem(600);
+        left: px2rem(0);
+        width: 100%;
+        color: #fff;
+        font-size: 16px;
+        text-align: center;
+        //animation: zoomIn 2s ease 1s 1 normal both;
+    }
+    .line-2 {
+        top: px2rem(680);
+    }
+    .invitation {
+        position: absolute;
+        top: px2rem(750);
+        left: px2rem(280);
+        color: #fff;
+        font-size: 18px;
+    }
+    .location {
+        position: absolute;
+        bottom: px2rem(100);
+        left: px2rem(280);
+        color: #fff;
+        font-size: 18px;
+    }
+    .company {
+        position: absolute;
+        bottom: px2rem(50);
+        left: px2rem(0);
+        width: 100%;
+        color: #fff;
+        font-size: 18px;
+        text-align: center;
+        //animation: fadeInUp 2s ease 2.2s 1 normal both;
+    }
+}
+.section-2 {
+    .title {
+        position: absolute;
+        top: px2rem(200);
+        left: px2rem(80);
+        color: #fff;
+        font-size: 24px;
+    }
+    .sub-title {
+        position: absolute;
+        top: px2rem(280);
+        left: px2rem(80);
+        color: #fff;
+        font-size: 16px;
+    }
+    .sub-title-2 {
+        position: absolute;
+        top: px2rem(360);
+        left: px2rem(80);
+        color: #fff;
+        font-size: 16px;
+    }
+    .content {
+        position: absolute;
+        top: px2rem(450);
+        left: px2rem(80);
+        color: #fff;
+        font-size: 12px;
+        line-height: 1.8;
+    }
+    .info-1 {
+        position: absolute;
+        top: px2rem(960);
+        left: px2rem(80);
+        color: #fff;
+        font-size: 16px;
+    }
+    .info-2 {
+        position: absolute;
+        top: px2rem(1000);
+        left: px2rem(80);
+        color: #fff;
+        font-size: 16px;
+    }
+    .info-3 {
+        position: absolute;
+        top: px2rem(1100);
+        left: px2rem(80);
+        color: #fff;
+        font-size: 16px;
+    }
+    .line {
+        position: absolute;
+        top: px2rem(430);
+        left: px2rem(80);
+        width: px2rem(300);
+        height: 1px;
+        background-color: #fff;
+    }
+    .line-2 {
+        top: px2rem(840);
     }
 }
 .asd {

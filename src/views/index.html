@@ -8,7 +8,7 @@
 </head>
 <body>
 <div class="page">
-    <div id="loading" class="loading" style="/* display: none; */">
+    <div id="loading" class="loading">
         <div class="loadbox">
             <div class="loadlogo"></div>
             <div class="loadbg"></div>
@@ -23,55 +23,102 @@
         <img class="cloud-3" src="/static/img/cloud.png">
         <img class="star-3" src="/static/img/star.png">
     </div>
-    <div class="bgm-btn rotate" data-event="11205" _tracker_click_="_tracker_click_" style="display: block;">
-        <audio loop="" src="http://res1.eqh5.com/5047b9485b9a4230bfe58e024317e0cf.mp3" autoplay="" preload=""></audio>
+    <div id="music" class="bgm-btn rotate" data-event="11205" _tracker_click_="_tracker_click_" style="display: block;">
+        <audio id="audio" loop="" src="http://res1.eqh5.com/5047b9485b9a4230bfe58e024317e0cf.mp3" autoplay="" preload=""></audio>
     </div>
 
     <div class="swiper-container">
         <div class="swiper-wrapper">
             <!-------------slide1----------------->
-            <section class="swiper-slide section-1">
-                <img class="logo" src="/static/img/logo.png">
+            <section class="swiper-slide section section-1">
+                <img class="logo ani"
+                     swiper-animate-effect="fadeInDown"
+                     swiper-animate-duration="2s"
+                     swiper-animate-delay="2s"
+                     src="/static/img/logo.png">
                 <div class="title ani fadeInUp animated"
                      swiper-animate-effect="fadeInUp"
-                     swiper-animate-duration="0.5s"
+                     swiper-animate-duration="2s"
                      swiper-animate-delay="0.3s">邀请函</div>
-
-                <img src="/static/img/s2-i2.png" class="asd ani resize fadeInUp animated"
-                     style="" swiper-animate-effect="fadeInUp"
-                     swiper-animate-duration="0.5s"
-                     swiper-animate-delay="0.3s">
-
-                <!--<img src="/static/img/s1-t2.png" class="ani resize"-->
-                     <!--style="width:100px;height:110px;left:70px;top:185px;z-index:3;" swiper-animate-effect="fadeIn"-->
-                     <!--swiper-animate-duration="0.5s" swiper-animate-delay="1.5s">-->
-                <!--<img src="/static/img/s1-t1.png" class="ani resize"-->
-                     <!--style="width:60px;height:110px;left:220px;top:185px;z-index:3;" swiper-animate-effect="bounceIn"-->
-                     <!--swiper-animate-duration="0.5s" swiper-animate-delay="1s">-->
-                <!--<img src="/static/img/flower.png" class="ani resize" style="width:180px;height:220px;left:0;top:0;z-index:2;"-->
-                     <!--swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="0s">-->
-                <!--<img src="/static/img/s1.png" class="ani resize" style="width:320px;height:200px;left:0px;top:140px;z-index:1;"-->
-                     <!--swiper-animate-effect="fadeIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">-->
-
+                <div class="text ani"
+                     swiper-animate-effect="zoomIn"
+                     swiper-animate-duration="2s"
+                     swiper-animate-delay="0.1s">
+                    易 &nbsp; 企 &nbsp; 秀 &nbsp; 新 &nbsp; 品 &nbsp; 发 &nbsp; 布 &nbsp; 会</div>
+                <div class="line ani"
+                     swiper-animate-effect="twisterInUpRight"
+                     swiper-animate-duration="2s"></div>
+                <div class="line line-2 ani"
+                     swiper-animate-effect="twisterInUpLeft"
+                     swiper-animate-duration="2s"></div>
+                <div class="invitation ani"
+                     swiper-animate-effect="fadeInUp"
+                     swiper-animate-duration="2s"
+                     swiper-animate-delay="1s">I N V I T A T I O N</div>
+                <div class="location ani"
+                     swiper-animate-effect="fadeInUp"
+                     swiper-animate-duration="2s"
+                     swiper-animate-delay="2s">
+                    [ 中国 · 北京 ]
+                </div>
+                <div class="company ani"
+                     swiper-animate-effect="fadeInUp"
+                     swiper-animate-duration="2s"
+                     swiper-animate-delay="2.2s">北京中网易企秀科技有限公司</div>
+                <!--<div class="white-bg ani"-->
+                     <!--swiper-animate-effect="fadeOut"-->
+                     <!--swiper-animate-duration="2s"-->
+                     <!--swiper-animate-delay="0s"></div>-->
             </section>
-            <!---------------slide2-------------->
-            <section class="swiper-slide">
-                <img src="/static/img/s2-i5.png" class="ani resize"
-                     style="width:263px;height:177px;left:31px;top:262px;z-index:5; border-radius:20px;"
-                     swiper-animate-effect="fadeInLeft" swiper-animate-duration="0.5s" swiper-animate-delay="2s">
-                <img src="/static/img/s2-i4.png" class="ani resize"
-                     style="width:195px;height:163px;left:31px;top:48px;z-index:4;" swiper-animate-effect="fadeInRight"
-                     swiper-animate-duration="0.5s" swiper-animate-delay="1.3s">
-                <img src="/static/img/s2-i3.png" class="ani resize"
-                     style="width:212px;height:186px;left:24px;top:36px;z-index:3;" swiper-animate-effect="fadeInLeft"
-                     swiper-animate-duration="0.5s" swiper-animate-delay="1s">
-                <img src="/static/img/s2-i2.png" class="ani resize"
-                     style="width:64px;height:221px;left:237px;top:20px;z-index:2;" swiper-animate-effect="fadeInUp"
-                     swiper-animate-duration="0.5s" swiper-animate-delay="0.3s">
-                <img src="/static/img/s2-i1.png" class="ani resize"
-                     style="width:42px;height:192px;left:248px;top:27px;z-index:1;" swiper-animate-effect="fadeInDown"
-                     swiper-animate-duration="0.5s" swiper-animate-delay="0s">
+            <!-- 新品发布 -->
+            <section class="swiper-slide section section-2">
 
+                <div class="title ani"
+                     swiper-animate-effect="fadeInLeft"
+                     swiper-animate-duration="2s"
+                     swiper-animate-delay="1s">新品发布</div>
+                <div class="sub-title ani"
+                     swiper-animate-effect="fadeInLeft"
+                     swiper-animate-duration="2s"
+                     swiper-animate-delay="1.2s">NEW PRODUCTS</div>
+                <div class="sub-title-2 ani"
+                     swiper-animate-effect="fadeInLeft"
+                     swiper-animate-duration="2s"
+                     swiper-animate-delay="1.4s">易企秀新品发布会</div>
+                <div class="content ani"
+                     swiper-animate-effect="zoomIn"
+                     swiper-animate-duration="2s"
+                     swiper-animate-delay="1.6s">
+                    <div>尊敬的女士/先生</div>
+                    <div>诚挚邀请您来参加T易企秀8.2版深圳发布会全球首发现场，我们为您准备了两天丰富的活动内容。首发当天，
+                        将会为您演示易企秀引领全球的新技术与特点，诚挚邀请您来参加T易企秀8.2版深圳发布会全球首发现场，我们为您准备了两天丰富的活动内容。首发当天，
+                        将会为您演示易企秀引领全球的新技术与特点，诚挚邀请您来参加T易企秀8.2版深圳发</div>
+                    <div>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;——北京中网易企秀科技有限公司</div>
+                </div>
+                <div class="info-1 ani"
+                     swiper-animate-effect="fadeInLeft"
+                     swiper-animate-duration="2s"
+                     swiper-animate-delay="1.8s">时间：2017年03月16日早上11:30</div>
+                <div class="info-2 ani"
+                     swiper-animate-effect="fadeInLeft"
+                     swiper-animate-duration="2s"
+                     swiper-animate-delay="2s">电话：010-15959537357</div>
+                <div class="info-3 ani"
+                     swiper-animate-effect="fadeInLeft"
+                     swiper-animate-duration="2s"
+                     swiper-animate-delay="2.2s">地址：北京市海淀区清华同方大厦</div>
+                <div class="line ani"
+                     swiper-animate-effect="fadeInLeft"
+                     swiper-animate-duration="2s"
+                     swiper-animate-delay="1.6s"></div>
+                <div class="line line-2 ani"
+                     swiper-animate-effect="fadeInLeft"
+                     swiper-animate-duration="2s"
+                     swiper-animate-delay="1.6s"></div>
+                <!--<div class="white-bg ani"-->
+                     <!--swiper-animate-effect="fadeOut"-->
+                     <!--swiper-animate-duration="0.5s"-->
+                     <!--swiper-animate-delay="0s"></div>-->
             </section>
             <!----------------slide3-------------->
             <section class="swiper-slide">
@@ -132,6 +179,6 @@
     </div>
 </div>
 
-<script src="/static/js/index.js"></script>
+@@include('../components/script.html')
 </body>
 </html>

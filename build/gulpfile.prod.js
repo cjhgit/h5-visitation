@@ -29,18 +29,6 @@ function prod() {
     gulp.task('css-sass-build', function(){
         return gulp.src(SRC_SCSS + '/**/*.scss')
             .pipe($.sass())
-            .pipe(gulp.dest(TARGET_TMP_CSS))
-    })
-
-    gulp.task('css-hash2', ['img-hash'], function () {
-        return gulp.src(TARGET_TMP_CSS + "/*.css")
-            .pipe(cachebust.references())
-            .pipe(gulp.dest(TARGET_TMP_CSS + '/hash'))
-    })
-
-    gulp.task('css-hash', function () {
-        return gulp.src(TARGET_TMP_CSS + '/hash/*.css')
-            .pipe(cachebust.resources())
             .pipe(gulp.dest(TARGET_CSS))
     })
 
@@ -71,18 +59,13 @@ function prod() {
             .pipe($.babel({
                 presets: ['es2015']
             }))
-            .pipe(gulp.dest(TARGET_TMP_JS))
+            .pipe(gulp.dest(TARGET_JS))
     })
 
     gulp.task('js-min', function() {
         return gulp.src(TARGET_JS + '/*.js')
             .pipe($.uglify())
             .pipe(gulp.dest(TARGET_JS))
-    })
-
-    gulp.task('img-build', function () {
-        return gulp.src('static/img/*')
-            .pipe(gulp.dest(TARGET_TMP_IMG))
     })
 
     gulp.task('html-include-build', function () {
@@ -94,48 +77,9 @@ function prod() {
             .pipe(gulp.dest(TARGET_TMP_HTML))
     })
 
-    gulp.task('img-hash', function () {
-        return gulp.src(TARGET_TMP_IMG + '/*')
-            .pipe(cachebust.resources())
-            .pipe(gulp.dest(TARGET_IMG))
-    })
-
-    // gulp.task('img-min', function () {
-    //     return gulp.src(TARGET_IMG + '/*.{png,jpg,gif,ico}')
-    //         .pipe($.imagemin())
-    //         .pipe(gulp.dest(TARGET_IMG))
-    // })
-
-    gulp.task('js-hash', function () {
-        return gulp.src(TARGET_TMP_JS + '/*.js')
-            .pipe(cachebust.resources())
-            .pipe(gulp.dest(TARGET_JS))
-    })
-    gulp.task('html-hash', ['css-hash', 'js-hash', 'img-hash'], function () {
-        return gulp.src(TARGET_TMP_HTML + "/*.html")
-            .pipe(cachebust.references())
-            .pipe(gulp.dest(TARGET_TMP_HTML + '/hash'))
-    })
-
-    gulp.task('html-min-zh', function () {
-        return gulp.src(TARGET_DIR + '/zh/*.html')
+    gulp.task('html-min', function () {
+        return gulp.src(TARGET_TMP_HTML + '/*.html')
             .pipe($.minifyHtml())
-            .pipe(gulp.dest(TARGET_DIR + '/zh'))
-    })
-
-    gulp.task('html-min-en', function () {
-        return gulp.src(TARGET_DIR + '/en/*.html')
-            .pipe($.minifyHtml())
-            .pipe(gulp.dest(TARGET_DIR + '/en'))
-    })
-
-    gulp.task('html-i18n-build', ['html-include-build'], function() {
-        return gulp.src(TARGET_TMP_HTML + '/hash/*.html')
-            .pipe($.htmlI18n({
-                langDir: SRC_I18N,
-                trace: true,
-                createLangDirs: true
-            }))
             .pipe(gulp.dest(TARGET_DIR))
     })
 
@@ -149,25 +93,17 @@ function prod() {
             .pipe($.clean())
     })
 
-    gulp.task('html-copy-build', function() {
-        return gulp.src(SRC_VIEWS + '/index/*.html')
-            .pipe($.fileInclude({
-                prefix: '@@',
-                basepath: '@file'
-            }))
-            .pipe(gulp.dest(TARGET_DIR))
+    gulp.task('static-copy', function() {
+        return gulp.src('static/**/*')
+            .pipe(gulp.dest(TARGET_DIR + '/static'))
     })
 
     gulp.task('build', gulpsync.sync([
         'clean-build',
-        ['css-sass-build', 'html-include-build', 'js-es6-build', 'img-build', 'html-copy-build'],
-        ['css-hash2'],
-        ['html-hash'],
-        ['html-i18n-build', 'css-map'/*'css-autoprefixer'*/],
-        ['js-min', 'css-min', 'html-min-zh', 'html-min-en'/*, 'img-min'*/],
-        'clean-build-2'
+        ['css-sass-build', 'html-include-build', 'js-es6-build', 'static-copy'],
+        ['js-min', 'css-min', 'html-min']
+        // 'clean-build-2'
     ]), function () {
-
         //调试生产环境
         // browserSync({
         //     server: {
