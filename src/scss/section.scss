@@ -164,6 +164,9 @@
         color: #fff;
         font-size: px2rem(26);
         line-height: 1.6;
+        p {
+            text-indent: px2rem(56)
+        }
     }
     .img {
         display: block;
@@ -243,7 +246,7 @@
         width: px2rem(674);
         height: px2rem(425);
         padding-top: px2rem(22);
-        margin: 0 auto px2rem(60) auto;
+        margin: 0 auto px2rem(40) auto;
         border: 2px solid #ccc;
     }
     .map {
@@ -259,7 +262,17 @@
         font-size: px2rem(28);
     }
     .email {
+        margin-bottom: px2rem(40);
         font-size: px2rem(28);
+    }
+    .qrcode {
+        display: block;
+        width: px2rem(170);
+        height: px2rem(170);
+        margin: 0 auto px2rem(24) auto;
+    }
+    .qrcode-text {
+        color: #fff;
     }
 }
 .section-6 {
