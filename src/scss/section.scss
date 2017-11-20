@@ -294,7 +294,59 @@
         top: px2rem(200);
         left: px2rem(300);
         width: 1px;
-        height: px2rem(690);
+        height: px2rem(600);
         background-color: #fff;
+    }
+}
+.service-list {
+    .item {
+        position: relative;
+        width: px2rem(674);
+        height: px2rem(144);
+        padding-top: px2rem(16);
+        margin: 0 auto px2rem(44) auto;
+        border: 1px solid #fff;
+    }
+    .top-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: px2rem(46);
+    }
+    .bottom-right {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: px2rem(46);
+    }
+}
+.case-list {
+    .item {
+        position: relative;
+        width: px2rem(674);
+        height: px2rem(350);
+        padding-top: px2rem(42);
+        margin: 0 auto px2rem(60) auto;
+        border: 1px solid #fff;
+    }
+    .top-left {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: px2rem(46);
+    }
+    .bottom-right {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: px2rem(46);
+    }
+    .img {
+        display: block;
+        width: px2rem(400);
+        margin: 0 auto px2rem(20) auto;
+    }
+    .content {
+        text-align: center;
     }
 }
