@@ -65,13 +65,25 @@ var mySwiper = new Swiper('.swiper-container', {
         //swiper.disableTouchControl();
     }
 })
-$('#loading').hide()
+
+let isIos = !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/) // ios 终端
 let playing = true
+// isIos = true
+if (isIos) {
+    playing = false
+    $('#music').css('animation', 'none')
+    document.getElementById('audio').pause()
+}
+// document.getElementById('audio').pause()
+//     document.getElementById('audio').play()
+$('#loading').hide()
+
 $('#music').on('click', function () {
     if (playing) {
         $(this).css('animation', 'none')
         document.getElementById('audio').pause()
     } else {
+
         $(this).css('animation', 'rotating 1.2s linear infinite')
         document.getElementById('audio').play()
     }
@@ -133,7 +145,5 @@ function addMapControl(){
     var ctrl_sca = new BMap.ScaleControl({anchor:BMAP_ANCHOR_BOTTOM_LEFT});
     //map.addControl(ctrl_sca);
 }
-
-// document.getElementById('audio').pause()
 
 initMap()

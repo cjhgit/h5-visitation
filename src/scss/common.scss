@@ -178,33 +178,33 @@ img {
     width: px2rem(600);
     margin-top: px2rem(-360);
     margin-left: px2rem(-280);
-    animation: MyRotate 20s linear 0s infinite normal both;
+    animation: rotating 20s linear 0s infinite normal both;
 }
 .layer-bg .cloud-2 {
     position: absolute;
     bottom: px2rem(-200);
     left: px2rem(-200);
     width: px2rem(400);
-    animation: MyRotate 20s linear 0s infinite normal both;
+    animation: rotating 20s linear 0s infinite normal both;
 }
 .layer-bg .star-2 {
     position: absolute;
     bottom: px2rem(-150);
     left: px2rem(-150);
     width: px2rem(300);
-    animation: MyRotate 20s linear 0s infinite normal both;
+    animation: rotating 20s linear 0s infinite normal both;
 }
 .layer-bg .cloud-3 {
     position: absolute;
     top: -30px;
     right: -35px;
     width: 134.5px;
-    animation: MyRotate 20s linear 0s infinite normal both;
+    animation: rotating 20s linear 0s infinite normal both;
 }
 .layer-bg .star-3 {
     position: absolute;
     top: -30px;
     right: -35px;
     width: 134.5px;
-    animation: MyRotate 20s linear 0s infinite normal both;
+    animation: rotating 20s linear 0s infinite normal both;
 }

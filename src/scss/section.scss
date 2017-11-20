@@ -44,15 +44,16 @@
     }
     .section-title-bg {
         position: absolute;
-        top: px2rem(0);
-        left: px2rem(225);
+        top: px2rem(-8);
+        left: 50%;
         width: px2rem(304);
         height: px2rem(112);
+        margin-left: px2rem(-152);
         background-image: url("/static/img/title-bg.png");
         background-size: 100% 100%;
     }
     .section-line {
-        width: px2rem(170);
+        width: px2rem(216);
         height: px2rem(18);
         margin: 0 auto px2rem(52) auto;
         background-color: #fff;
@@ -77,12 +78,12 @@
     }
     .earth-box {
         position: absolute;
-        bottom: px2rem(-480);
+        bottom: px2rem(-580);
         left: 0;
     }
     .earth {
         width: px2rem(750);
-        animation: MyRotate 15s linear 0s infinite normal both;
+        animation: rotating 15s linear 0s infinite normal both;
         img {
             width: 100%;
         }
@@ -103,7 +104,7 @@
     }
     .earth {
         width: px2rem(750);
-        animation: MyRotate 15s linear 0s infinite normal both;
+        animation: rotating 15s linear 0s infinite normal both;
         img {
             width: 100%;
         }
@@ -159,10 +160,10 @@
 .section-2 {
     .content {
         padding: 0 px2rem(38);
-        margin-bottom: px2rem(60);
+        margin-bottom: px2rem(40);
         color: #fff;
         font-size: px2rem(26);
-        line-height: 1.8;
+        line-height: 1.6;
     }
     .img {
         display: block;
@@ -267,8 +268,9 @@
         margin-top: px2rem(119);
         .item {
             display: flex;
+            height: px2rem(40);
             font-size: px2rem(28);
-            margin-bottom: px2rem(28);
+            margin-bottom: px2rem(60);
         }
         .time {
             width: px2rem(180);
@@ -279,7 +281,7 @@
         top: px2rem(200);
         left: px2rem(300);
         width: 1px;
-        height: px2rem(460);
+        height: px2rem(690);
         background-color: #fff;
     }
 }

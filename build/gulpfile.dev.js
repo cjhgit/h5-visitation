@@ -79,6 +79,15 @@ function dev() {
             .pipe(reload({stream: true}))
     })
 
+    gulp.task('static-copy', function() {
+        return gulp.src('static/**/*')
+            .pipe($.fileInclude({
+                prefix: '@@',
+                basepath: '@file'
+            }))
+            .pipe(gulp.dest('dist/static'))
+    })
+
     gulp.task('html-copy', function() {
         return gulp.src(SRC_VIEWS + '/index/*.html')
             .pipe($.fileInclude({
@@ -91,7 +100,7 @@ function dev() {
 
     gulp.task('dev', gulpsync.sync([
         // 'clean-build',
-        ['html-include', 'res-copy', 'js-copy', 'js-eslint', 'css-sass', 'js-es6', 'img'],
+        ['html-include', 'res-copy', 'js-copy', 'js-eslint', 'css-sass', 'js-es6', 'img', 'static-copy'],
         ['html-copy']
     ]), function () {
         browserSync({
