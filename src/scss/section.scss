@@ -262,5 +262,24 @@
     }
 }
 .section-6 {
-
+    .process-list {
+        padding-left: px2rem(170);
+        margin-top: px2rem(119);
+        .item {
+            display: flex;
+            font-size: px2rem(28);
+            margin-bottom: px2rem(28);
+        }
+        .time {
+            width: px2rem(180);
+        }
+    }
+    .line {
+        position: absolute;
+        top: px2rem(200);
+        left: px2rem(300);
+        width: 1px;
+        height: px2rem(460);
+        background-color: #fff;
+    }
 }
