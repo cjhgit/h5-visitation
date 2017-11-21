@@ -79,6 +79,8 @@ var mySwiper = new Swiper('.swiper-container', {
 // document.getElementById('audio').pause()
 //     document.getElementById('audio').play()
 
+let playing = true
+
 function audioAutoPlay(id){
     var audio = document.getElementById(id);
     audio.play();
