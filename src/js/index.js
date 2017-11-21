@@ -79,6 +79,17 @@ var mySwiper = new Swiper('.swiper-container', {
 // document.getElementById('audio').pause()
 //     document.getElementById('audio').play()
 
+function audioAutoPlay(id){
+    var audio = document.getElementById(id);
+    audio.play();
+    document.addEventListener("WeixinJSBridgeReady", function () {
+        audio.play();
+    }, false);
+    document.addEventListener('YixinJSBridgeReady', function() {
+        audio.play();
+    }, false);
+}
+audioAutoPlay('audio')
 
 $('#music').on('click', function () {
     if (playing) {
