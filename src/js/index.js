@@ -66,17 +66,19 @@ var mySwiper = new Swiper('.swiper-container', {
     }
 })
 
-let isIos = !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/) // ios 终端
-let playing = true
-// isIos = true
-if (isIos) {
-    playing = false
-    $('#music').css('animation', 'none')
-    document.getElementById('audio').pause()
-}
+// let isIos = !!navigator.userAgent.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/) // ios 终端
+// let playing = true
+// // isIos = true
+// if (isIos) {
+//     playing = false
+//     $('#music').css('animation', 'none')
+//     document.getElementById('audio').pause()
+// } else {
+//     document.getElementById('audio').play()
+// }
 // document.getElementById('audio').pause()
 //     document.getElementById('audio').play()
-$('#loading').hide()
+
 
 $('#music').on('click', function () {
     if (playing) {
@@ -147,3 +149,5 @@ function addMapControl(){
 }
 
 initMap()
+
+$('#loading').hide()

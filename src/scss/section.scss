@@ -322,12 +322,16 @@
 }
 .case-list {
     .item {
+        margin-bottom: px2rem(40);
+    }
+    .box {
         position: relative;
-        width: px2rem(674);
-        height: px2rem(350);
-        padding-top: px2rem(42);
-        margin: 0 auto px2rem(60) auto;
+        width: px2rem(482);
+        height: px2rem(302);
+        padding-top: px2rem(62);
+        margin: 0 auto px2rem(23) auto;
         border: 1px solid #fff;
+        background-color: rgba(255, 255, 255, .55);
     }
     .top-left {
         position: absolute;
@@ -343,7 +347,7 @@
     }
     .img {
         display: block;
-        width: px2rem(400);
+        width: px2rem(318);
 //        background-color: #fff;
         margin: 0 auto px2rem(20) auto;
     }
