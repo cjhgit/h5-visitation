@@ -165,7 +165,7 @@ initMap()
 
 $('#loading').hide()
 
-var url = location.href.split('#')[0]
+var url = encodeURIComponent(location.href.split('#')[0])
 $.ajax({
     url: "http://m.liangchuantech.com/wechat/jsapi?url=" + url,
     success: function (result) {
