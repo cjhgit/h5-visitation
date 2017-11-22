@@ -179,7 +179,7 @@ $.ajax({
         console.log('结果')
         console.log(result)
         wx.config({
-               // debug: true,
+               debug: true,
             appId: result.appId,
             timestamp: result.timestamp,
             nonceStr: result.nonceStr,
