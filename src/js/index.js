@@ -187,13 +187,29 @@ $.ajax({
                 console.log('失败', res)
             })
 
+            let title = '量川科技开业邀请函'
+            let desc = '11月28日广州量川科技隆重开业'
             var imgUrl = location.origin + '/static/img/wechat-logo-300.jpg'
 
             console.log('图片地址')
             console.log(imgUrl)
+            // 分享到朋友圈
+            wx.onMenuShareTimeline({
+                title: title,
+                desc: desc,
+                link: url,
+                imgUrl: imgUrl,
+                success: function () {
+                    console.log('确认分享2')
+                },
+                cancel: function () {
+                    console.log('取消分享2')
+                }
+            })
+            // 分享给朋友
             wx.onMenuShareAppMessage({
-                title: '量川科技开业邀请函',
-                desc: '11月28日广州量川科技隆重开业',
+                title: title,
+                desc: desc,
                 link: url,
                 imgUrl: imgUrl,
                 success: function () {
@@ -202,8 +218,7 @@ $.ajax({
                 cancel: function () {
                     console.log('取消分享')
                 }
-            });
-
+            })
             wx.checkJsApi({
                 jsApiList: ['onMenuShareAppMessage'], // 需要检测的JS接口列表，所有JS接口列表见附录2,
                 success: function(res) {
