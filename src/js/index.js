@@ -183,7 +183,7 @@ $.ajax({
         console.log('结果')
         console.log(result)
         wx.config({
-               debug: true,
+               // debug: true,
             appId: result.appId,
             timestamp: result.timestamp,
             nonceStr: result.nonceStr,
@@ -197,8 +197,8 @@ $.ajax({
 
         wx.ready(function() {
             wx.error(function(res){
-                alert('失败')
-                alert(res)
+                // alert('失败')
+                // alert(res)
                 console.log('失败', res)
             })
 
