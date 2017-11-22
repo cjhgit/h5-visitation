@@ -164,3 +164,51 @@ function addMapControl(){
 initMap()
 
 $('#loading').hide()
+
+var url = location.href.split('#')[0]
+$.ajax({
+    url: "http://m.liangchuantech.com/wechat/jsapi?url=" + url,
+    success: function (result) {
+        wx.config({
+//                debug: true,
+            appId: result.appId,
+            timestamp: result.timestamp,
+            nonceStr: result.nonceStr,
+            signature: result.signature,
+            jsApiList: [
+                'onMenuShareAppMessage',
+                'onMenuShareTimeline',
+                'hideOptionMenu'
+            ]
+        })
+
+        wx.ready(function() {
+            wx.error(function(res){
+                console.log('失败', res)
+            })
+
+            var imgUrl = location.origin + '/img/wechat-logo-300.jpg'
+
+            wx.onMenuShareAppMessage({
+                title: '量川科技开业邀请函',
+                desc: '广州量川科技欢迎您。',
+                link: url,
+                imgUrl: imgUrl,
+                success: function () {
+                    console.log('确认分享')
+                },
+                cancel: function () {
+                    console.log('取消分享')
+                }
+            });
+
+            wx.checkJsApi({
+                jsApiList: ['onMenuShareAppMessage'], // 需要检测的JS接口列表，所有JS接口列表见附录2,
+                success: function(res) {
+                    // 以键值对的形式返回，可用的api值true，不可用为false
+                    // 如：{"checkResult":{"chooseImage":true},"errMsg":"checkJsApi:ok"}
+                }
+            })
+        })
+    }
+})
