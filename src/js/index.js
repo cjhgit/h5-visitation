@@ -189,6 +189,8 @@ $.ajax({
 
             var imgUrl = location.origin + '/img/wechat-logo-300.jpg'
 
+            console.log('图片地址')
+            console.log(imgUrl)
             wx.onMenuShareAppMessage({
                 title: '量川科技开业邀请函',
                 desc: '广州量川科技欢迎您。',
