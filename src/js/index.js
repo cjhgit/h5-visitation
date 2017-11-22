@@ -167,7 +167,7 @@ $('#loading').hide()
 
 var url = encodeURIComponent(location.href.split('#')[0])
 // let domain = 'http://m.liangchuantech.com'
-let domain = 'http://192.168.3.22:53397'
+let domain = 'http://192.168.3.22:12222'
 $.ajax({
     url: domain + "/wechat/jsapi?url=" + url,
     success: function (result) {
