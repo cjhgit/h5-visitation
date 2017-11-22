@@ -170,7 +170,7 @@ $.ajax({
     url: "http://m.liangchuantech.com/wechat/jsapi?url=" + url,
     success: function (result) {
         wx.config({
-//                debug: true,
+               debug: true,
             appId: result.appId,
             timestamp: result.timestamp,
             nonceStr: result.nonceStr,
