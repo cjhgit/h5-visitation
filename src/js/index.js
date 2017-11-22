@@ -166,8 +166,10 @@ initMap()
 $('#loading').hide()
 
 var url = encodeURIComponent(location.href.split('#')[0])
+// let domain = 'http://m.liangchuantech.com'
+let domain = 'http://192.168.3.22:53397'
 $.ajax({
-    url: "http://m.liangchuantech.com/wechat/jsapi?url=" + url,
+    url: domain + "/wechat/jsapi?url=" + url,
     success: function (result) {
         console.log('原先的URL')
         console.log(location.href.split('#')[0])
