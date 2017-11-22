@@ -187,7 +187,7 @@ $.ajax({
                 console.log('失败', res)
             })
 
-            var imgUrl = location.origin + '/img/wechat-logo-300.jpg'
+            var imgUrl = location.origin + '/static/img/wechat-logo-300.jpg'
 
             console.log('图片地址')
             console.log(imgUrl)
