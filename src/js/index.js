@@ -165,7 +165,8 @@ initMap()
 
 $('#loading').hide()
 
-var url = encodeURIComponent(location.href.split('#')[0])
+// var url = encodeURIComponent(location.href.split('#')[0])
+var url = location.href.split('#')[0]
 let domain = 'http://m.liangchuantech.com'
 // let domain = 'http://192.168.3.22:12222'
 // let domain = 'http://120.24.226.112:12222'
