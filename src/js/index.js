@@ -193,7 +193,7 @@ $.ajax({
             console.log(imgUrl)
             wx.onMenuShareAppMessage({
                 title: '量川科技开业邀请函',
-                desc: '广州量川科技欢迎您。',
+                desc: '11月28日广州量川科技隆重开业',
                 link: url,
                 imgUrl: imgUrl,
                 success: function () {
