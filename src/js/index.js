@@ -169,6 +169,10 @@ var url = encodeURIComponent(location.href.split('#')[0])
 $.ajax({
     url: "http://m.liangchuantech.com/wechat/jsapi?url=" + url,
     success: function (result) {
+        console.log('url')
+        console.log(url)
+        console.log('结果')
+        console.log(result)
         wx.config({
                debug: true,
             appId: result.appId,
