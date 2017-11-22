@@ -169,6 +169,8 @@ var url = encodeURIComponent(location.href.split('#')[0])
 $.ajax({
     url: "http://m.liangchuantech.com/wechat/jsapi?url=" + url,
     success: function (result) {
+        console.log('原先的URL')
+        console.log(location.href.split('#')[0])
         console.log('url')
         console.log(url)
         console.log('结果')
