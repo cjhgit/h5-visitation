@@ -184,6 +184,8 @@ $.ajax({
 
         wx.ready(function() {
             wx.error(function(res){
+                alert('失败')
+                alert(res)
                 console.log('失败', res)
             })
 
