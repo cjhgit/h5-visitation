@@ -2,6 +2,10 @@ console.log('debug')
 
 let $ = window.$
 
+if ($('#section-content').outerHeight() > $('body').outerHeight()) {
+    console.log('高')
+    $('.section-content').css('top', '0.2rem')
+}
 $('#back').on('click', () => {
     if (history.length > 1) {
         history.go(-1)
